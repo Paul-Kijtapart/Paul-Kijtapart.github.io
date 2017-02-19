@@ -2,7 +2,10 @@
 	"name": "Kijtapart Nawattranakul",
 	"school": "University Of British Columbia",
 	"major": "Computer Science",
-	"location": "Vancouver B.C. ",
+	"graduate_year": "2016",
+	"location": "Vancouver B.C.",
+	"status": "Looking for Full-Time Junior Software Developer Position",
+	"interests": ["Full-Stack Developement", "Front-End Developement", "Android Developement"],
 	"contactURL": {
 		"github": "github.com/Paul-Kijtapart",
 		"linkedin": "ca.linkedin.com/in/aornawattranakul"

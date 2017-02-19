@@ -33,6 +33,6 @@ module.exports = {
 			SRC,
 			NODE_MODULES
 		]
-	}
-	// devtool: 'source-map'
+	},
+	devtool: 'source-map'
 };

@@ -11,11 +11,11 @@ class PortfolioApp extends React.Component {
 	render() {
 		return (
 			<div className="portfolioApp">
-				<Introduction/>
-				<Experience />
-				<Education />
+				<Introduction aor_json={this.props.aor_json} />
+				<Experience aor_json={this.props.aor_json} />
+				<Education aor_json={this.props.aor_json} />
 				<Skill />
-				<Contact />
+				<Contact aor_json={this.props.aor_json}/>
 			</div>);
 	}
 
