@@ -1,0 +1,44 @@
+.portfolioApp {
+	@include container(1140px);
+	@include clearfix;
+	color: $black_0;
+	text-align: center;
+}
+
+.introduction {
+	@include span(full);
+	@include clearfix;
+	background-color: $black_6;
+
+
+	.cardProfile {
+		@include span(4 of 12 last);
+		background-color: $black_8;
+	}
+}
+
+.experience {
+	@include span(full);
+	@include clearfix;
+	background-color: $black_3;
+}
+
+.education {
+	@include span(full);
+	@include clearfix;
+	background-color: $black_6;
+}
+
+.skill {
+	@include span(full);
+	@include clearfix;
+	background-color: $black_7;
+}
+
+.contact {
+	@include span(full);
+	@include clearfix;
+	background-color: $black_7;
+}
+
+
