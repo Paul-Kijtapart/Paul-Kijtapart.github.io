@@ -6,7 +6,10 @@ class SocialMediaItem extends React.Component {
 		const url = this.props.url;
 		return (
 			<li className="socialMediaItem">
-				<a href={url}> {hostname} </a>
+				<a href={url} target="_blank" > 
+					{hostname}
+					<span> TODO: ADD ICONS </span>
+				</a>
 			</li>
 		);
 	}

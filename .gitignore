@@ -5,6 +5,66 @@ public/index.css
 public/index.js.map
 images
 
+scripts/.idea/
+
+# Created by https://www.gitignore.io/api/pycharm
+
+### PyCharm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+scripts/.idea/**/workspace.xml
+scripts/.idea/**/tasks.xml
+
+# Sensitive or high-churn files:
+scripts/.idea/**/dataSources/
+scripts/.idea/**/dataSources.ids
+scripts/.idea/**/dataSources.xml
+scripts/.idea/**/dataSources.local.xml
+scripts/.idea/**/sqlDataSources.xml
+scripts/.idea/**/dynamic.xml
+scripts/.idea/**/uiDesigner.xml
+
+# Gradle:
+scripts/.idea/**/gradle.xml
+scripts/.idea/**/libraries
+
+# Mongo Explorer plugin:
+scripts/.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+scripts/# mpeltonen/sbt-idea plugin
+scripts/.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### PyCharm Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+*.iml
+modules.xml
+scripts/.idea/misc.xml
+*.ipr
+
+# End of https://www.gitignore.io/api/pycharm
+
+
+
 # Created by https://www.gitignore.io/api/node,sass
 
 ### Node ###
