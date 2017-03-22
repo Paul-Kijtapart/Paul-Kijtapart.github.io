@@ -1,18 +1,76 @@
 {
-	"name": "Kijtapart Nawattranakul",
+	"name": "Paul Kijtapart Nawattranakul",
 	"school": "University Of British Columbia",
 	"major": "Computer Science",
 	"graduate_year": "2016",
 	"location": "Vancouver B.C.",
-	"status": "Looking for Full-Time Junior Software Developer Position",
-	"interests": ["Full-Stack Developement", "Front-End Developement", "Android Developement"],
+	"status": "Seeking full time opportunity for Junior Software Engineer",
+	"interests": [
+		"Full-Stack Developement",
+		"Front-End Developement",
+		"Android Developement"
+	],
 	"contactURL": {
 		"github": "github.com/Paul-Kijtapart",
 		"linkedin": "ca.linkedin.com/in/aornawattranakul"
 	},
-	"projects": {
-		"personal": [],
-		"academic": [],
-		"hackathon": []
-	}
+	"projects": [{
+		"name": "MapViz",
+		"type": "web",
+		"eventType": "Hack-a-thon",
+		"start": "",
+		"end": "",
+		"url": "",
+		"responsibilities": [
+			"Won 2nd place at Open Data Hack-a-thon #HackOurCity.",
+			"Full stack development using Python, Django, React, Sass, and PostgreSQL.",
+			"Contributed to aggregating dataset, parsing dataset, creating corresponding models and loading those data to a PostgreSQL database.",
+			"Wrote queries to associate Foreign and Primary Keys between tables.",
+			"Used LeafletJS to render a Choropleth map based on scoring function."
+		]
+	}, {
+		"name": "Shopping Web",
+		"type": "web",
+		"eventType": "personal",
+		"start": "",
+		"end": "",
+		"url": "https://github.com/Paul-Kijtapart/Shopping",
+		"responsibilities": [
+			"Full stack development using Node, Express, React, Sass, and MongoDB.",
+			"Implemented RESTful Web services and end points.",
+			"Established session between client and server using express-session module.",
+			"Implemented server-side authentication using passport and bCrypt modules."
+		]
+	}, {
+		"name": "GoTron",
+		"type": "web",
+		"eventType": "academic",
+		"start": "",
+		"end": "",
+		"url": "",
+		"responsibilities": [
+			"Developed & maintained match making server using Go Language.",
+			"Established connection between server and clients with RPC protocol.",
+			"Marshaled and Un-marshaled JSON to communicate between server and clients.",
+			"Handled concurrent client’s connection and client’s disconnection during GoTron games."
+		]
+	}, {
+		"name": "Where's the Food?",
+		"type": "web",
+		"eventType": "academic",
+		"start": "",
+		"end": "",
+		"url": "https://vivid-torch-5902.firebaseapp.com",
+		"responsibilities": [
+			"Contributed to writing Front-end client using Backbone.js and Bootstrap.css.",
+			"Adopted Agile software development approach.",
+			"Contributed to creating Firebase server which stores Vancouver food truck NoSQL data.",
+			"Used Google Places API to retrieve food truck’s hours of operation.",
+			"Established social interaction between users by using Instagram API."
+		]
+	}, {
+		"name": "AFKPU Android Keyboard",
+		"type": "phone",
+		"eventType": "work"
+	}]
 }

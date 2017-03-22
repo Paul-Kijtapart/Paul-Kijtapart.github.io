@@ -1,21 +1,100 @@
 @import "normalize";
-@import 'compass';
-@import 'susy';
-@import 'breakpoint';
+@import "compass";
+@import "susy";
+@import "breakpoint";
 
-$susy: (
-  columns: 12,
-  gutter: 1/4,
-  math: fluid,
-  global-box-sizing: border-box,
-  );
+$susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
 @include border-box-sizing;
 
 // Partials
-@import 'partials/variables';
-@import 'partials/resume';
+@import "partials/variables";
 
 #root {
-	background-color: $black_0;
+    background-color: $black_0;
+}
+
+.portfolioApp {
+    @include container;
+    @include clearfix;
+
+    color: $black_0;
+    text-align: center;
+}
+
+.introduction {
+    @include container;
+    @include clearfix;
+
+    background-color: $black_6;
+
+    .description {
+        @include span(8 of 12 first);
+    }
+
+    .cardProfile {
+        @include span(4 of 12 last);
+
+        background-color: $black_8;
+    }
+}
+
+.experience {
+    @include container;
+    @include clearfix;
+
+    background-color: $black_3;
+
+    .card {
+        background-color: white;
+
+        @include span(1 wider of 3);
+
+        color: black;
+
+        &:last-child {
+            @include span(last);
+        }
+    }
+}
+
+.education {
+    @include container;
+    @include clearfix;
+
+    background-color: $black_6;
+}
+
+.skill {
+    @include container;
+    @include clearfix;
+
+    background-color: $black_7;
+}
+
+.contact {
+    @include container;
+    @include clearfix;
+
+    background-color: $black_7;
+
+    .loadResume {
+        margin: 0 auto;
+    }
+
+    .socialMediaList {
+        margin: 0 auto;
+        list-style-type: none;
+
+        .socialMediaItem {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            @include breakpoint(900px) { // mobile
+                display: inline-block;
+            }
+        }
+    }
 }

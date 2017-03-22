@@ -3,10 +3,10 @@ import React from 'react';
 
 class CardProfile extends React.Component {
 	render() {
-		const location = this.props.aor_json.location;
-		const school = this.props.aor_json.school;
-		const major = this.props.aor_json.major;
-		const interests = this.props.aor_json.interests.map(function(interest, index) {
+		const location = this.props.aorInfo.location;
+		const school = this.props.aorInfo.school;
+		const major = this.props.aorInfo.major;
+		const interests = this.props.aorInfo.interests.map(function(interest, index) {
 			return (
 				<h3 key={index}> {interest} </h3>
 			);
@@ -25,8 +25,8 @@ class CardProfile extends React.Component {
 
 class Description extends React.Component {
 	render() {
-		const name = this.props.aor_json.name;
-		const status = this.props.aor_json.status;
+		const name = this.props.aorInfo.name;
+		const status = this.props.aorInfo.status;
 		return (
 			<div className="description">
 				<h2> {name} </h2>

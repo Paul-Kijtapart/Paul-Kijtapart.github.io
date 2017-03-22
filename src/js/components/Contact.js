@@ -19,7 +19,7 @@ class SocialMediaItem extends React.Component {
 class SocialMediaList extends React.Component {
 	render() {
 		const social_media_list = [];
-		const contacts = this.props.aor_json.contactURL;
+		const contacts = this.props.aorInfo.contactURL;
 		for (let hostname in contacts) {
 			social_media_list.push(
 				<SocialMediaItem 
@@ -43,7 +43,7 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className="contact">
-				<button className="loadResume"> Load Resume </button>
+				<button className="ui button loadResume"> Load Resume </button>
 				<SocialMediaList {...this.props}/>
 			</div>
 		);
