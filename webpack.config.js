@@ -12,6 +12,7 @@ module.exports = {
 		filename: 'index.js',
 		path: PUBLIC
 	},
+	watch: true,
 	module: {
 		rules: [{
 			test: /\.jsx?$/,
@@ -29,7 +30,7 @@ module.exports = {
 	resolve: {
 		modules: [
 			path.join(SRC, 'js'),
-			path.resolve(__dirname, 'resume'),
+			path.resolve(__dirname, 'scripts'),
 			SRC,
 			NODE_MODULES
 		]

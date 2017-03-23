@@ -10,7 +10,7 @@ import Skill from 'components/Skill.js';
 import Contact from 'components/Contact.js';
 
 // JSON
-import Aornawat_JSON from 'aornawat.json';
+import Aornawat_JSON from 'resume/aornawat.json';
 
 var temp = {};
 ReactDOM.render(

@@ -47,13 +47,12 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     .card {
         background-color: white;
-
-        @include span(1 wider of 3);
-
         color: black;
-
-        &:last-child {
-            @include span(last);
+        
+        .responsibilities {
+            > p {
+                font-size: 15px;
+            }
         }
     }
 }
