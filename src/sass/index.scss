@@ -48,7 +48,31 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     .card {
         background-color: white;
         color: black;
-        
+
+        div#image_slider {
+            margin: 0 auto;
+            width: span(full);
+            color: #333;
+            background: #419be0;
+            max-height: 300px;
+
+            // .slick-prev, .slick-next {
+            //     font-size: 30px;
+            // }
+
+            // .slick-prev {
+            //     // Prev arrow 
+            // }
+
+            // .slick-next {
+            //     // Next arrow
+            // }
+
+            // .slick-dots {
+               // Dots under images
+            // }
+        }
+
         .responsibilities {
             > p {
                 font-size: 15px;
@@ -91,7 +115,8 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
                 text-decoration: none;
             }
 
-            @include breakpoint(900px) { // mobile
+            @include breakpoint(900px) {
+                // mobile
                 display: inline-block;
             }
         }

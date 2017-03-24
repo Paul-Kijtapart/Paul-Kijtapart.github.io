@@ -14,7 +14,7 @@ class PortfolioApp extends React.Component {
 				<Introduction aorInfo={this.props.aorInfo} />
 				<Experience aorInfo={this.props.aorInfo} />
 				<Education aorInfo={this.props.aorInfo} />
-				<Skill />
+				<Skill aorInfo={this.props.aorInfo} />
 				<Contact aorInfo={this.props.aorInfo}/>
 			</div>);
 	}

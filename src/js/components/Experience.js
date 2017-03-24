@@ -8,7 +8,6 @@ import Slider from "react-slick";
 class Card extends React.Component {
 	render() {
 		const image_slider_config = {
-			dots: true,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,
@@ -17,24 +16,34 @@ class Card extends React.Component {
 		const responsibilities = this.props.responsibilities.map(function(responsibility, index) {
 			return (<p key={index}> {responsibility} </p>);
 		});
+		const images = this.props.images.map(function(image_path, index) {
+			return (
+				<div key={index}>
+					<img src={image_path} />
+				</div>
+			);
+		});
 
 		const name = this.props.name;
 		return (
 			<div className="card">
 				<h2 className="ui dividing header" id="app_name"> {name} </h2>
+				<div id="image_slider">
+					<Slider 
+					{...image_slider_config}
+					>
+						<div><h3>1</h3></div>
+				        <div><h3>2</h3></div>
+				        <div><h3>3</h3></div>
+				        <div><h3>4</h3></div>
+				        <div><h3>5</h3></div>
+				        <div><h3>6</h3></div>
+					</Slider>
+				</div>
+				<div className="ui divider"></div>
 				<div className="responsibilities">
 					{responsibilities}
 				</div>
-				<Slider 
-					{...image_slider_config}
-				>
-					<div><h3>1</h3></div>
-			        <div><h3>2</h3></div>
-			        <div><h3>3</h3></div>
-			        <div><h3>4</h3></div>
-			        <div><h3>5</h3></div>
-			        <div><h3>6</h3></div>
-				</Slider>
 			</div>
 		);
 	}

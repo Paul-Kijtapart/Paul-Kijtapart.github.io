@@ -4,33 +4,31 @@
     "school": "University Of British Columbia",
     "major": "Computer Science",
     "graduate_year": "2016",
-    "courses": [
-      {
-        "name": "Advanced Database",
-        "type": "cpsc",
-        "score": 9
-      },
-      {
-        "name": "Machine Learning",
-        "type": "cpsc",
-        "score": 7
-      },
-      {
-        "name": "AI",
-        "type": "cpsc",
-        "score": 9
-      },
-      {
-        "name": "Economic",
-        "type": "econ",
-        "score": 8
-      },
-      {
-        "name": "Matrix",
-        "type": "math",
-        "score": 8
-      }
-    ]
+    "courses": [{
+      "name": "Advanced Relational Database",
+      "type": "cpsc",
+      "score": 92
+    }, {
+      "name": "Machine Learning and Data Mining",
+      "type": "cpsc",
+      "score": 74
+    }, {
+      "name": "Introduction to Artificial Intelligence",
+      "type": "cpsc",
+      "score": 83
+    }, {
+      "name": "Distributed Systems",
+      "type": "cpsc",
+      "score": 85
+    }, {
+      "name": "Intermediate Microeconomic Analysis I",
+      "type": "econ",
+      "score": 75
+    }, {
+      "name": "Matrix Algebra",
+      "type": "math",
+      "score": 84
+    }]
   },
   "location": "Vancouver B.C.",
   "status": "Seeking full time opportunity for Junior Software Engineer",
@@ -43,184 +41,165 @@
     "github": "github.com/Paul-Kijtapart",
     "linkedin": "ca.linkedin.com/in/aornawattranakul"
   },
-  "technical_skills": [
-    {
-      "name": "Java",
-      "type": "language",
-      "level": 8
-    },
-    {
-      "name": "JavaScript",
-      "type": "language",
-      "level": 7
-    },
-    {
-      "name": "React",
-      "type": "library",
-      "level": 6
-    },
-    {
-      "name": "Express",
-      "type": "library",
-      "level": 6
-    },
-    {
-      "name": "Sass",
-      "type": "library",
-      "level": 6
-    },
-    {
-      "name": "Git",
-      "type": "source_control",
-      "level": 7
-    },
-    {
-      "name": "Python",
-      "type": "language",
-      "level": 6
-    },
-    {
-      "name": "Go",
-      "type": "language",
-      "level": 4
-    },
-    {
-      "name": "MySQL",
-      "type": "database",
-      "level": 6
-    },
-    {
-      "name": "PostgreSQL",
-      "type": "database",
-      "level": 6
-    },
-    {
-      "name": "MongoDB",
-      "type": "database",
-      "level": 6
-    },
-    {
-      "name": "Angular",
-      "type": "language",
-      "level": 4
-    }
-  ],
-  "projects": [
-    {
-      "name": "MapViz",
-      "type": "web",
-      "eventType": "Hack-a-thon",
-      "start": "",
-      "end": "",
-      "url": "",
-      "icon": "",
-      "images": [],
-      "team_size": 3,
-      "languages": [
-        "Python",
-        "Django",
-        "React",
-        "Sass",
-        "PostgreSQL",
-        "Leaflet"
-      ],
-      "responsibilities": [
-        "Won 2nd place at Open Data Hack-a-thon #HackOurCity.",
-        "Full stack development using Python, Django, React, Sass, and PostgreSQL.",
-        "Contributed to aggregating dataset, parsing dataset, creating corresponding models and loading those data to a PostgreSQL database.",
-        "Wrote queries to associate Foreign and Primary Keys between tables.",
-        "Used LeafletJS to render a Choropleth map based on scoring function."
-      ]
-    },
-    {
-      "name": "Shopping Web",
-      "type": "web",
-      "eventType": "personal",
-      "start": "",
-      "end": "",
-      "url": "https://github.com/Paul-Kijtapart/Shopping",
-      "icon": "",
-      "images": [],
-      "team_size": 1,
-      "languages": [
-        "Node",
-        "Express",
-        "React",
-        "Sass",
-        "MongoDB"
-      ],
-      "responsibilities": [
-        "Full stack development using Node, Express, React, Sass, and MongoDB.",
-        "Implemented RESTful Web services and end points.",
-        "Established session between client and server using express-session module.",
-        "Implemented server-side authentication using passport and bCrypt modules."
-      ]
-    },
-    {
-      "name": "GoTron",
-      "type": "web",
-      "eventType": "academic",
-      "start": "",
-      "end": "",
-      "url": "",
-      "icon": "",
-      "images": [],
-      "team_size": 4,
-      "languages": [
-        "Go",
-        "Python"
-      ],
-      "responsibilities": [
-        "Developed & maintained match making server using Go Language.",
-        "Established connection between server and clients with RPC protocol.",
-        "Marshaled and Un-marshaled JSON to communicate between server and clients.",
-        "Handled concurrent client's connection and client's disconnection during GoTron games."
-      ]
-    },
-    {
-      "name": "Where's the Food?",
-      "type": "web",
-      "eventType": "academic",
-      "start": "",
-      "end": "",
-      "url": "https://vivid-torch-5902.firebaseapp.com",
-      "icon": "",
-      "images": [],
-      "team_size": 4,
-      "languages": [
-        "Backbone",
-        "Firebase",
-        "Karma-Jasmine",
-        "Bootstrap"
-      ],
-      "responsibilities": [
-        "Contributed to writing Front-end client using Backbone.js and Bootstrap.css.",
-        "Adopted Agile software development approach.",
-        "Contributed to creating Firebase server which stores Vancouver food truck NoSQL data.",
-        "Used Google Places API to retrieve food truck's hours of operation.",
-        "Established social interaction between users by using Instagram API."
-      ]
-    },
-    {
-      "name": "AFKPU Android Keyboard",
-      "type": "android",
-      "eventType": "work",
-      "start": "",
-      "end": "",
-      "url": "",
-      "icon": "",
-      "images": [],
-      "team_size": 2,
-      "languages": [
-        "Java",
-        "JUnit"
-      ],
-      "responsibilities": [
-        "Adopted Agile software development approach.",
-        "Contributed to writing event handler for keyboard inputs.",
-        "Contributed to drawing UML diagram, and translating the UML diagram to classes.",
-        "Synchronized the UI of the keyboard with its current mode."
-      ]
-    }
-  ]
+  "technical_skills": [{
+    "name": "Java",
+    "type": "language",
+    "level": 8
+  }, {
+    "name": "JavaScript",
+    "type": "language",
+    "level": 7
+  }, {
+    "name": "React",
+    "type": "library",
+    "level": 6
+  }, {
+    "name": "Express",
+    "type": "library",
+    "level": 6
+  }, {
+    "name": "Sass",
+    "type": "library",
+    "level": 6
+  }, {
+    "name": "Git",
+    "type": "source_control",
+    "level": 7
+  }, {
+    "name": "Python",
+    "type": "language",
+    "level": 6
+  }, {
+    "name": "Go",
+    "type": "language",
+    "level": 4
+  }, {
+    "name": "MySQL",
+    "type": "database",
+    "level": 6
+  }, {
+    "name": "PostgreSQL",
+    "type": "database",
+    "level": 6
+  }, {
+    "name": "MongoDB",
+    "type": "database",
+    "level": 6
+  }, {
+    "name": "Angular",
+    "type": "language",
+    "level": 4
+  }],
+  "projects": [{
+    "name": "MapViz",
+    "type": "web",
+    "eventType": "Hack-a-thon",
+    "start": "",
+    "end": "",
+    "url": "",
+    "icon": "",
+    "images": [],
+    "team_size": 3,
+    "languages": [
+      "Python",
+      "Django",
+      "React",
+      "Sass",
+      "PostgreSQL",
+      "Leaflet"
+    ],
+    "responsibilities": [
+      "Won 2nd place at Open Data Hack-a-thon #HackOurCity.",
+      "Full stack development using Python, Django, React, Sass, and PostgreSQL.",
+      "Contributed to aggregating dataset, parsing dataset, creating corresponding models and loading those data to a PostgreSQL database.",
+      "Wrote queries to associate Foreign and Primary Keys between tables.",
+      "Used LeafletJS to render a Choropleth map based on scoring function."
+    ]
+  }, {
+    "name": "Shopping Web",
+    "type": "web",
+    "eventType": "personal",
+    "start": "",
+    "end": "",
+    "url": "https://github.com/Paul-Kijtapart/Shopping",
+    "icon": "",
+    "images": [],
+    "team_size": 1,
+    "languages": [
+      "Node",
+      "Express",
+      "React",
+      "Sass",
+      "MongoDB"
+    ],
+    "responsibilities": [
+      "Full stack development using Node, Express, React, Sass, and MongoDB.",
+      "Implemented RESTful Web services and end points.",
+      "Established session between client and server using express-session module.",
+      "Implemented server-side authentication using passport and bCrypt modules."
+    ]
+  }, {
+    "name": "GoTron",
+    "type": "web",
+    "eventType": "academic",
+    "start": "",
+    "end": "",
+    "url": "",
+    "icon": "",
+    "images": [],
+    "team_size": 4,
+    "languages": [
+      "Go",
+      "Python"
+    ],
+    "responsibilities": [
+      "Developed & maintained match making server using Go Language.",
+      "Established connection between server and clients with RPC protocol.",
+      "Marshaled and Un-marshaled JSON to communicate between server and clients.",
+      "Handled concurrent client's connection and client's disconnection during GoTron games."
+    ]
+  }, {
+    "name": "Where's the Food?",
+    "type": "web",
+    "eventType": "academic",
+    "start": "",
+    "end": "",
+    "url": "https://vivid-torch-5902.firebaseapp.com",
+    "icon": "",
+    "images": [],
+    "team_size": 4,
+    "languages": [
+      "Backbone",
+      "Firebase",
+      "Karma-Jasmine",
+      "Bootstrap"
+    ],
+    "responsibilities": [
+      "Contributed to writing Front-end client using Backbone.js and Bootstrap.css.",
+      "Adopted Agile software development approach.",
+      "Contributed to creating Firebase server which stores Vancouver food truck NoSQL data.",
+      "Used Google Places API to retrieve food truck's hours of operation.",
+      "Established social interaction between users by using Instagram API."
+    ]
+  }, {
+    "name": "AFKPU Android Keyboard",
+    "type": "android",
+    "eventType": "work",
+    "start": "",
+    "end": "",
+    "url": "",
+    "icon": "",
+    "images": [],
+    "team_size": 2,
+    "languages": [
+      "Java",
+      "JUnit"
+    ],
+    "responsibilities": [
+      "Adopted Agile software development approach.",
+      "Contributed to writing event handler for keyboard inputs.",
+      "Contributed to drawing UML diagram, and translating the UML diagram to classes.",
+      "Synchronized the UI of the keyboard with its current mode."
+    ]
+  }]
 }
