@@ -1,14 +1,28 @@
 import React from 'react';
 
 class SocialMediaItem extends React.Component {
+	constructor(props) {
+		super(props);
+		this.getMatchingIcon = this.getMatchingIcon.bind(this);
+	}
+
+	getMatchingIcon(hostname) {
+		hostname = hostname.toLowerCase();
+		if (hostname.indexOf("linkedin") !== -1) {
+			return <i className="Linkedin Square huge icon" />
+		} else if (hostname.indexOf("github") !== -1) {
+			return <i className="Github Square huge icon" />
+		}
+	}
+
 	render() {
 		const hostname = this.props.hostname;
 		const url = this.props.url;
+		const icon = this.getMatchingIcon(hostname);
 		return (
 			<li className="socialMediaItem">
 				<a href={url} target="_blank" > 
-					{hostname}
-					<span> TODO: ADD ICONS </span>
+					{icon}
 				</a>
 			</li>
 		);
@@ -43,7 +57,7 @@ class Contact extends React.Component {
 	render() {
 		return (
 			<div className="contact">
-				<button className="ui button loadResume"> Load Resume </button>
+				<button className="huge positive ui button loadResume"> Load Resume </button>
 				<SocialMediaList {...this.props}/>
 			</div>
 		);

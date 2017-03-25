@@ -10,33 +10,14 @@ import {
 	ResponsiveContainer
 } from 'recharts';
 
+// Black and white Icons
+import Surprised_icon from "icons/flaticon_svg/color/surprised.svg";
+import Smiling_icon from "icons/flaticon_svg/color/smiling.svg";
+import Happy_icon from "icons/flaticon_svg/color/happy.svg";
+import Happy_2_icon from "icons/flaticon_svg/color/happy-2.svg";
+import Love_icon from "icons/flaticon_svg/color/in-love.svg";
 
 const CustomAxisTick = function(props) {
-	var getMatchingIcon = function(level) {
-		switch (level) {
-			case 2:
-				break;
-			case 4:
-				break;
-			case 6:
-				break;
-			case 8:
-				break;
-			case 10:
-				break;
-		}
-		return undefined;
-	};
-
-	var toProficientString = function(level, level_meaning) {
-		if (!(level in level_meaning)) {
-			return "";
-		}
-		return {
-			icon: getMatchingIcon(level),
-			meaning: level_meaning[level]
-		}
-	};
 	const {
 		level_meaning,
 		fill,
@@ -46,14 +27,45 @@ const CustomAxisTick = function(props) {
 		payload
 	} = props;
 
-	console.log(level_meaning);
-	console.log(payload.value);
+	const icon_config = {
+		width: 22,
+		height: 22,
+		x: x - 10,
+		y: y + 6,
+		fill: "#ffffff"
+	};
+
+	var getMatchingIcon = function(level, icon_config) {
+		switch (level) {
+			case 2:
+				return <Surprised_icon {...icon_config}/>;
+			case 4:
+				return <Smiling_icon {...icon_config}/>;
+			case 6:
+				return <Happy_icon {...icon_config}/>;
+			case 8:
+				return <Happy_2_icon {...icon_config}/>;
+			case 10:
+				return <Love_icon {...icon_config}/>;
+		}
+		return undefined;
+	};
+
+	var toProficientString = function(level, level_meaning) {
+		if (!(level in level_meaning)) {
+			return "";
+		}
+		return {
+			icon: getMatchingIcon(level, icon_config),
+			meaning: level_meaning[level]
+		}
+	};
 
 	let res = toProficientString(payload.value, level_meaning)
 	return (
 		<g>
-			<text x={x} y={y} dy={34} textAnchor="middle" fill={fill}>
-    			{res.icon}
+			{res.icon}
+			<text x={x} y={y} dy={44} textAnchor="middle" fill={fill}>
     			{res.meaning}
     		</text>
 		</g>
@@ -73,7 +85,7 @@ class BarChartView extends React.Component {
 					<BarChart 
 					  data={technical_skill_list} 
 					  layout="vertical"
-					  margin={{top: 5, right: 30, left: 20, bottom: 15}}
+					  margin={{top: 5, right: 30, left: 20, bottom: 25}}
 					>
 					  <XAxis 
 					  	domain={[0, 10]} 

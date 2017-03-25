@@ -25,12 +25,25 @@ module.exports = {
 			use: [{
 				loader: 'json-loader'
 			}]
+		}, {
+			test: /\.svg$/,
+			loaders: [{
+				loader: 'babel-loader',
+				query: {
+					presets: ['es2015']
+				}
+			}, {
+				loader: 'react-svg-loader',
+				query: {
+					jsx: true
+				}
+			}]
 		}]
 	},
 	resolve: {
 		modules: [
 			path.join(SRC, 'js'),
-			path.resolve(__dirname, 'scripts'),
+			path.resolve(__dirname, 'data'),
 			SRC,
 			NODE_MODULES
 		]

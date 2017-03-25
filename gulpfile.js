@@ -35,7 +35,13 @@ gulp.task('css', function() {
 });
 
 gulp.task('compile', ['css', 'js']);
+gulp.task('watchcss', function() {
+	gulp.watch(STYLE_PATHS, ['css']);
+});
+
+gulp.task('watchjs', function() {
+	gulp.watch(SCRIPT_PATHS, ['js']);
+});
 gulp.task('watch', function() {
 	gulp.watch(SCRIPT_PATHS, ['js']);
-	gulp.watch(STYLE_PATHS, ['css']);
 });

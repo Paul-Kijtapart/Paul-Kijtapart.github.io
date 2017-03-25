@@ -20,6 +20,11 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     color: $black_0;
     text-align: center;
+
+    > div {
+        clear: both;
+        padding-bottom: 20px;
+    }
 }
 
 .introduction {
@@ -119,11 +124,13 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     .loadResume {
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 
     .socialMediaList {
         margin: 0 auto;
         list-style-type: none;
+        margin-bottom: 10px;
 
         .socialMediaItem {
             a {
