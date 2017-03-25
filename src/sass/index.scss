@@ -69,8 +69,9 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
             // }
 
             // .slick-dots {
-               // Dots under images
+            // Dots under images
             // }
+       
         }
 
         .responsibilities {
@@ -93,6 +94,21 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     @include clearfix;
 
     background-color: $black_7;
+    color: white;
+
+    .barChartView {
+
+        .recharts-responsive-container {
+            margin: 0 auto;
+            .recharts-layer.recharts-y-axis {
+                color: white;
+            }
+
+            .recharts-layer.recharts-x-axis {
+
+            }
+        }
+    }
 }
 
 .contact {

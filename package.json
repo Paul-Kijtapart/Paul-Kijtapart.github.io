@@ -30,6 +30,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-event-timeline": "^1.2.2",
+    "react-icons": "^2.2.3",
     "react-slick": "^0.14.7",
     "recharts": "^0.21.2"
   },

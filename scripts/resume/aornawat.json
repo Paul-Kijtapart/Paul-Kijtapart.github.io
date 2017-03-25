@@ -41,6 +41,13 @@
     "github": "github.com/Paul-Kijtapart",
     "linkedin": "ca.linkedin.com/in/aornawattranakul"
   },
+  "level_meaning": {
+    "10": "Full Power",
+    "8": "Pretty good",
+    "6": "Moderate and Improving",
+    "4": "Beginner but hopeful",
+    "2": "NotLikeThis"
+  },
   "technical_skills": [{
     "name": "Java",
     "type": "language",
@@ -52,7 +59,7 @@
   }, {
     "name": "React",
     "type": "library",
-    "level": 6
+    "level": 7
   }, {
     "name": "Express",
     "type": "library",
@@ -84,7 +91,7 @@
   }, {
     "name": "MongoDB",
     "type": "database",
-    "level": 6
+    "level": 4
   }, {
     "name": "Angular",
     "type": "language",
