@@ -56,6 +56,11 @@ class EducationPerformance extends React.Component {
 			strokeWidth: 4
 		};
 
+		const animation_config = {
+			duration: 1400,
+			easing: 'easeInOut'
+		};
+
 		const courseDiplay = courses.map(function(course) {
 			return (
 				<Circle 
@@ -63,6 +68,8 @@ class EducationPerformance extends React.Component {
 					progress={course.score / 100}
 					text={course.name}
 					options={progressbar_config}
+					initialAnimate={true}
+					animateOptions={animation_config}
                 	containerClassName={'educationProgressbar'}
 				/>
 			);
