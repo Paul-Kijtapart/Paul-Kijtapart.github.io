@@ -23,7 +23,8 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     > div {
         clear: both;
-        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
     }
 }
 
@@ -88,10 +89,31 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 }
 
 .education {
-    @include container;
+    @include span(full);
     @include clearfix;
 
     background-color: $black_6;
+
+    > div {
+        clear: both;
+    }
+
+    .educationCard {}
+
+    .educationPerformance {
+        .educationProgressbar {
+            width: span(3 of 12);
+            max-height: 300px;
+            margin: 20px;
+            display: inline-block;
+
+            .progressbar-text {
+                line-height: 1.5em;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .skill {
@@ -102,16 +124,14 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     color: white;
 
     .barChartView {
-
         .recharts-responsive-container {
             margin: 0 auto;
+
             .recharts-layer.recharts-y-axis {
                 color: white;
             }
 
-            .recharts-layer.recharts-x-axis {
-
-            }
+            .recharts-layer.recharts-x-axis {}
         }
     }
 }
