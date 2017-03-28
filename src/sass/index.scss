@@ -51,33 +51,43 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     background-color: $black_3;
 
+    .experienceTimeLine {
+        .timeLineEvent {
+
+        }
+    }
+
     .card {
         background-color: white;
         color: black;
 
         div#image_slider {
             margin: 0 auto;
-            width: span(full);
+            width: span(8 of 12);
             color: #333;
             background: #419be0;
-            max-height: 300px;
+            height: 300px;
+            max-height: 450px;
 
-            // .slick-prev, .slick-next {
-            //     font-size: 30px;
-            // }
+            button.slick-arrow.slick-prev:before, 
+            button.slick-arrow.slick-next:before {
+                color: blue;
+            }
 
-            // .slick-prev {
-            //     // Prev arrow 
-            // }
+            .slick-dots {
+                > li {
+                    &.slick-active {
 
-            // .slick-next {
-            //     // Next arrow
-            // }
+                        button:before {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+        }
 
-            // .slick-dots {
-            // Dots under images
-            // }
-       
+        .ui.divider {
+            margin-top: 30px;
         }
 
         .responsibilities {

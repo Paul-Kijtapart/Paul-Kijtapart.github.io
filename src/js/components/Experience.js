@@ -8,6 +8,8 @@ import Slider from "react-slick";
 class Card extends React.Component {
 	render() {
 		const image_slider_config = {
+			dots: true,
+			infinite: true,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,
@@ -32,12 +34,22 @@ class Card extends React.Component {
 					<Slider 
 					{...image_slider_config}
 					>
-						<div><h3>1</h3></div>
-				        <div><h3>2</h3></div>
-				        <div><h3>3</h3></div>
-				        <div><h3>4</h3></div>
-				        <div><h3>5</h3></div>
-				        <div><h3>6</h3></div>
+						<div>
+							<img />
+							<p> 1 </p>
+						</div>
+				        <div>
+				        	<img />
+				        	<p> 2 </p>
+				        </div>
+				        <div>
+				        	<img />
+				        	<p> 3 </p>
+				        </div>
+				        <div>
+				        	<img />
+				        	<p> 4 </p>
+				        </div>
 					</Slider>
 				</div>
 				<div className="ui divider"></div>
@@ -49,20 +61,25 @@ class Card extends React.Component {
 	}
 };
 
+import Android_icon from "icons/flaticon_svg/color/android.svg";
 class Experience extends React.Component {
 	render() {
 		const aorInfo = this.props.aorInfo;
 		const projects = aorInfo.projects;
 		const timeLineEvents = projects.map(function(project) {
-			const icon_type = <i> {project.type} </i>;
+			const icon = (
+				<Android_icon />
+				// TODO: Icon displayed should correspond to the type of work
+			);
 			//TODO: Display icons based on the type of the project
 			// Need to addd different classname for each Type here
 			return (
 				<TimelineEvent
+					className="timeLineEvent"
 					key={project.name}
 					title={project.eventType}
 					createdAt={project.start}
-					icon={icon_type}
+					icon={icon}
 				>
 					<Card
 						name={project.name}
@@ -75,7 +92,9 @@ class Experience extends React.Component {
 
 		return (
 			<div className="experience">
-				<Timeline>
+				<Timeline
+					className="experienceTimeLine"
+				>
             		{timeLineEvents}
     			</Timeline>
 			</div>
