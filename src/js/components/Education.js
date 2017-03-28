@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import {
 	Circle
-} from "react-progressbar.js";
+} from "./ProgressBar.js";
 
 function EducationCard(props) {
 	const university_name = props.school;
