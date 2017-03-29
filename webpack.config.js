@@ -3,14 +3,12 @@ const webpack = require('webpack');
 const gutil = require("gulp-util");
 
 const SRC = path.resolve(__dirname, 'src');
-const PUBLIC = path.resolve(__dirname, 'public');
 const NODE_MODULES = path.resolve(__dirname, 'node_modules');
 
 module.exports = {
 	entry: path.join(SRC, 'js', 'index.js'),
 	output: {
-		filename: 'index.js',
-		path: PUBLIC
+		filename: 'index.js'
 	},
 	watch: true,
 	module: {

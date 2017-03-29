@@ -6,7 +6,7 @@ const path = require('path');
 
 // Paths
 const SRC = path.resolve(__dirname, 'src');
-const PUBLIC = path.resolve(__dirname, 'public');
+const HOME = path.resolve(__dirname);
 const WEBPACK_CONFIG_PATH = path.resolve(__dirname, 'webpack.config.js');
 const COMPASS_CONFIG_PATH = path.resolve(__dirname, 'config.rb');
 const SCRIPT_PATHS = path.join(SRC, '/**/*.js');
@@ -28,10 +28,10 @@ gulp.task('css', function() {
 	gulp.src(path.join(SRC, 'sass', 'index.scss'))
 		.pipe(compass({
 			config_file: COMPASS_CONFIG_PATH,
-			css: PUBLIC,
+			css: HOME,
 			sass: path.join(SRC, 'sass')
 		}))
-		.pipe(gulp.dest(PUBLIC))
+		.pipe(gulp.dest(HOME))
 });
 
 gulp.task('compile', ['css', 'js']);

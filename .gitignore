@@ -1,10 +1,10 @@
 # Created by Aornawat
 
-public/index.js
-public/index.css
-public/index.js.map
 images
+__pycache__
 
+
+.idea/
 scripts/.idea/
 
 # Created by https://www.gitignore.io/api/pycharm
