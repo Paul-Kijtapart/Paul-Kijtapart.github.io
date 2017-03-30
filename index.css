@@ -300,14 +300,23 @@ th {
 }
 .experience .card div.image_slider_wrapper {
   width: 100%;
-  background-color: #ccc;
 }
 .experience .card div.image_slider_wrapper div.image_slider {
   margin: 0 auto;
   color: #333;
-  background: #419be0;
+  background-color: #ccc;
   max-width: 66.10169%;
   height: 400px;
+}
+.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active .slick_image {
+  margin: 0 auto;
+  max-width: 100%;
+  align-self: center;
 }
 .experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-prev:before,
 .experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-next:before {
@@ -391,12 +400,11 @@ th {
   list-style-type: none;
   margin-bottom: 10px;
 }
+.contact .socialMediaList .socialMediaItem {
+  display: inline-block;
+}
 .contact .socialMediaList .socialMediaItem a {
   color: white;
   text-decoration: none;
-}
-@media (min-width: 900px) {
-  .contact .socialMediaList .socialMediaItem {
-    display: inline-block;
-  }
+  margin-right: 10px;
 }

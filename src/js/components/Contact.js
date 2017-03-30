@@ -1,5 +1,10 @@
 import React from 'react';
 
+// Icons
+import Linkedin_icon from "icons/flaticon_svg/color/linkedin.svg";
+import Github_icon from "icons/flaticon_svg/color/github.svg";
+
+
 class SocialMediaItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -9,9 +14,19 @@ class SocialMediaItem extends React.Component {
 	getMatchingIcon(hostname) {
 		hostname = hostname.toLowerCase();
 		if (hostname.indexOf("linkedin") !== -1) {
-			return <i className="Linkedin Square huge icon" />
+			return (
+				<Linkedin_icon
+					width={"3em"}
+					height={"3em"}
+				/>
+			);
 		} else if (hostname.indexOf("github") !== -1) {
-			return <i className="Github Square huge icon" />
+			return (
+				<Github_icon 
+					width={"3em"}
+					height={"3em"}
+				/>
+			);
 		}
 	}
 

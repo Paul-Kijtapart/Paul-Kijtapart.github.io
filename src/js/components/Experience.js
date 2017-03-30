@@ -8,26 +8,31 @@ import Slider from "react-slick";
 class Card extends React.Component {
 	render() {
 		const image_slider_config = {
-			autoplay: true,
 			dots: true,
 			infinite: true,
-			infinite: true,
-			speed: 500,
+			speed: 800,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
 		}; // TODO: add responsive for phone
 		const responsibilities = this.props.responsibilities.map(function(responsibility, index) {
 			return (<p key={index}> {responsibility} </p>);
 		});
+
 		const images = this.props.images.map(function(image_path, index) {
+			const abs_parent_image = "data/images/projects/experience";
+
 			return (
-				<div key={index}>
-					<img src={image_path} />
+				<div
+					key={index}
+				>
+					<img
+						className="slick_image"
+						src={abs_parent_image + "/" + image_path}
+					/>
 				</div>
 			);
 		});
 
-		const name = this.props.name;
 		return (
 			<div className="card">
 				<h2 className="ui dividing header" id="app_name"> {name} </h2>
@@ -36,6 +41,7 @@ class Card extends React.Component {
 						<Slider 
 						{...image_slider_config}
 						>
+							{images}
 							<div>
 								<img />
 								<p> 1 </p>
@@ -43,14 +49,6 @@ class Card extends React.Component {
 					        <div>
 					        	<img />
 					        	<p> 2 </p>
-					        </div>
-					        <div>
-					        	<img />
-					        	<p> 3 </p>
-					        </div>
-					        <div>
-					        	<img />
-					        	<p> 4 </p>
 					        </div>
 						</Slider>
 					</div>

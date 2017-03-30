@@ -61,15 +61,25 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
         div.image_slider_wrapper {
             width: span(full);
-            background-color: #ccc;
 
             div.image_slider {
                 margin: 0 auto;
                 color: #333;
-                background: #419be0;
+                background-color: #ccc;
                 max-width: span(8 of 12);
                 height: 400px;
-                
+
+                .slick-slide.slick-active {
+                    @include display-flex;
+
+                    justify-content: center;
+
+                    .slick_image {
+                        margin: 0 auto;
+                        max-width: 100%;
+                        align-self: center;
+                    }
+                }
 
                 button.slick-arrow.slick-prev:before,
                 button.slick-arrow.slick-next:before {
@@ -166,14 +176,12 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
         margin-bottom: 10px;
 
         .socialMediaItem {
+            display: inline-block;
+
             a {
                 color: white;
                 text-decoration: none;
-            }
-
-            @include breakpoint(900px) {
-                // mobile
-                display: inline-block;
+                margin-right: 10px;
             }
         }
     }

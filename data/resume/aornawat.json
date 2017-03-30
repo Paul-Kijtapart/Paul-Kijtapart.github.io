@@ -105,7 +105,10 @@
     "end": "",
     "url": "",
     "icon": "",
-    "images": [],
+    "images": [
+      "mapViz1.experience.png",
+      "mapViz2.experience.png"
+    ],
     "team_size": 3,
     "languages": [
       "Python",
@@ -153,7 +156,13 @@
     "end": "",
     "url": "",
     "icon": "",
-    "images": [],
+    "images": [
+      "goTronA.experience.png",
+      "goTronB.experience.png",
+      "goTronBafter.experience.png",
+      "goTronEvent.experience.png",
+      "goTronShiviz.experience.png"
+    ],
     "team_size": 4,
     "languages": [
       "Go",
@@ -173,7 +182,14 @@
     "end": "",
     "url": "https://vivid-torch-5902.firebaseapp.com",
     "icon": "",
-    "images": [],
+    "images": [
+      "WTFood.experience.png",
+      "WTFood1.experience.png",
+      "WTFood2.experience.png",
+      "WTFood3.experience.png",
+      "WTFood4.experience.png",
+      "WTFood5.experience.png"
+    ],
     "team_size": 4,
     "languages": [
       "Backbone",
