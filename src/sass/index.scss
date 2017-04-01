@@ -15,7 +15,7 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 }
 
 .portfolioApp {
-    @include container;
+    @include container(1140px);
     @include clearfix;
 
     color: $black_0;
@@ -23,8 +23,6 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     > div {
         clear: both;
-        padding-top: 20px;
-        padding-bottom: 10px;
     }
 }
 
@@ -33,46 +31,133 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     @include clearfix;
 
     background-color: $black_6;
+    width: 100%;
+    height: 400px;
+
+    // Hotspot: height here can be adjusted based on screen size
+
+    > div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    li {
+        font-size: 1.2em;
+    }
 
     .description {
-        @include span(8 of 12 first);
+        @include span(7 of 12 first);
+        @include display-flex;
+
+        height: 100%;
+        justify-content: center;
+
+        .description_content_wrapper {
+            align-self: center;
+            width: span(full);
+            text-align: left;
+
+            > * {
+                margin-left: span(2 wider of 12);
+            }
+        }
     }
 
     .cardProfile {
-        @include span(4 of 12 last);
+        @include span(5 of 12 last);
 
         background-color: $black_8;
+        height: 100%;
+        border-radius: 50%;
+
+        .card_profile_content_wrapper {
+            width: 100%;
+
+            .profile_image_wrapper {
+                @include display-flex;
+
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                background-color: white;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 50%;
+
+                .profile_image {
+                    align-self: center;
+                    width: 350px;
+                    border-radius: 50%;
+                }
+            }
+        }
     }
 }
 
 .experience {
-    @include container;
+    @include container(12);
     @include clearfix;
 
-    background-color: $black_3;
-
-    .experienceTimeLine {
-        .timeLineEvent {}
-    }
+    background-color: white;
 
     .card {
+        @include span(full);
+        @include clearfix;
+
         background-color: white;
         color: black;
+        margin-bottom: 20px;
+        clear: both;
+        position: relative;
+        padding-top: 20px;
+        border-top: 2px solid #ccc;
+
+        &:first-child {
+            border-top: none;
+        }
 
         div.image_slider_wrapper {
-            width: span(full);
+            @include span(7 of 12 first no-gutters);
+
+            // Need to confirm that this works on phone
+            @include breakpoint(max-width 800px) {
+                @include span(full);
+
+                margin-bottom: 20px;
+            }
+
 
             div.image_slider {
-                margin: 0 auto;
                 color: #333;
                 background-color: #ccc;
-                max-width: span(8 of 12);
+                margin: 0 auto;
+                width: span(10 of 12);
                 height: 400px;
 
+                .slick-initialized.slick-slider {
+                    height: 100%;
+                    width: 100%;
+
+                    .slide_block {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                // Current Viewing Block
                 .slick-slide.slick-active {
                     @include display-flex;
 
                     justify-content: center;
+                    background-color: #ccc;
 
                     .slick_image {
                         margin: 0 auto;
@@ -87,26 +172,78 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
                     font-size: 20px;
                 }
 
-                .slick-dots {
-                    > li {
-                        &.slick-active {
-                            button:before {
-                                color: blue;
-                            }
-                        }
+                ul.experience_image_slider_dot_bar {
+                    display: none;
+                }
+            }
+
+            .single_image_wrapper {
+                @extend div.image_slider;
+            }
+        }
+
+        .description {
+            @include span(5 of 12 last);
+
+            ul.responsibilityList {
+                list-style: none;
+                text-align: left;
+
+                li.responsibility {
+                    font-size: 1.2em;
+                }
+            }
+
+            .languages_wrapper {
+                text-align: left;
+            }
+
+            // Possible Extendsion
+            .team_wrapper {}
+
+            @include breakpoint(max-width 800px) {
+                @include span(full);
+
+                ul.responsibilityList,
+                .languages_wrapper {
+                    margin-left: span(4 wider of 12);
+
+                    // Smaller Screen size: Phone/ Tablet
+                    @include breakpoint(max-width 800px) {
+                        margin-left: span(3 of 12);
                     }
                 }
             }
         }
 
-        .ui.divider {
-            margin-top: 30px;
-        }
+        .description.full {
+            width: span(full);
+            float: none;
+            margin: 0 auto;
 
-        .responsibilities {
-            > p {
-                font-size: 15px;
+            ul.responsibilityList,
+            .languages_wrapper {
+                margin-left: span(4 wider of 12);
+
+                // Smaller Screen size: Phone/ Tablet
+                @include breakpoint(max-width 800px) {
+                    margin-left: span(3 of 12);
+                }
             }
+
+            ul.responsibilityList {
+                width: span(6 of 12);
+                list-style: none;
+                text-align: left;
+            }
+
+            .languages_wrapper {
+                width: span(6 of 12);
+                text-align: left;
+            }
+
+            // Possible Extendsion
+            .team_wrapper {}
         }
     }
 }
@@ -119,6 +256,8 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     > div {
         clear: both;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .educationCard {}
@@ -146,7 +285,13 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     background-color: $black_7;
     color: white;
 
+    > h2 {
+        padding-top: 20px;
+    }
+
     .barChartView {
+        padding-bottom: 40px;
+
         .recharts-responsive-container {
             margin: 0 auto;
 

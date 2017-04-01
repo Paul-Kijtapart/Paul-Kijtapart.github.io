@@ -237,7 +237,7 @@ th {
 }
 
 .portfolioApp {
-  max-width: 100%;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -252,8 +252,6 @@ th {
 }
 .portfolioApp > div {
   clear: both;
-  padding-top: 20px;
-  padding-bottom: 10px;
 }
 
 .introduction {
@@ -263,22 +261,70 @@ th {
   overflow: hidden;
   *zoom: 1;
   background-color: #595C5F;
+  width: 100%;
+  height: 400px;
 }
 .introduction:after {
   content: " ";
   display: block;
   clear: both;
 }
+.introduction > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.introduction h4 {
+  font-size: 1.3em;
+}
+.introduction p {
+  font-size: 1.1em;
+}
+.introduction li {
+  font-size: 1.2em;
+}
 .introduction .description {
-  width: 66.10169%;
+  width: 57.62712%;
   float: left;
   margin-right: 1.69492%;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+.introduction .description .description_content_wrapper {
+  align-self: center;
+  width: 100%;
+  text-align: left;
+}
+.introduction .description .description_content_wrapper > * {
+  margin-left: 18.64407%;
 }
 .introduction .cardProfile {
-  width: 32.20339%;
+  width: 40.67797%;
   float: right;
   margin-right: 0;
   background-color: #303336;
+  height: 100%;
+  border-radius: 50%;
+}
+.introduction .cardProfile .card_profile_content_wrapper {
+  width: 100%;
+}
+.introduction .cardProfile .card_profile_content_wrapper .profile_image_wrapper {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.introduction .cardProfile .card_profile_content_wrapper .profile_image_wrapper .profile_image {
+  align-self: center;
+  width: 350px;
+  border-radius: 50%;
 }
 
 .experience {
@@ -287,7 +333,7 @@ th {
   margin-right: auto;
   overflow: hidden;
   *zoom: 1;
-  background-color: #A0A3A6;
+  background-color: white;
 }
 .experience:after {
   content: " ";
@@ -295,42 +341,128 @@ th {
   clear: both;
 }
 .experience .card {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  *zoom: 1;
   background-color: white;
   color: black;
+  margin-bottom: 20px;
+  clear: both;
+  position: relative;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}
+.experience .card:first-child {
+  border-top: none;
 }
 .experience .card div.image_slider_wrapper {
-  width: 100%;
+  width: 57.62712%;
+  float: left;
 }
-.experience .card div.image_slider_wrapper div.image_slider {
-  margin: 0 auto;
+@media (max-width: 800px) {
+  .experience .card div.image_slider_wrapper {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.experience .card div.image_slider_wrapper div.image_slider, .experience .card div.image_slider_wrapper .single_image_wrapper {
   color: #333;
   background-color: #ccc;
-  max-width: 66.10169%;
+  margin: 0 auto;
+  width: 83.05085%;
   height: 400px;
 }
-.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active {
+.experience .card div.image_slider_wrapper div.image_slider .slick-initialized.slick-slider, .experience .card div.image_slider_wrapper .single_image_wrapper .slick-initialized.slick-slider {
+  height: 100%;
+  width: 100%;
+}
+.experience .card div.image_slider_wrapper div.image_slider .slick-initialized.slick-slider .slide_block, .experience .card div.image_slider_wrapper .single_image_wrapper .slick-initialized.slick-slider .slide_block {
+  height: 100%;
+  width: 100%;
+}
+.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active, .experience .card div.image_slider_wrapper .single_image_wrapper .slick-slide.slick-active {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
+  background-color: #ccc;
 }
-.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active .slick_image {
+.experience .card div.image_slider_wrapper div.image_slider .slick-slide.slick-active .slick_image, .experience .card div.image_slider_wrapper .single_image_wrapper .slick-slide.slick-active .slick_image {
   margin: 0 auto;
   max-width: 100%;
   align-self: center;
 }
-.experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-prev:before,
-.experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-next:before {
+.experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-prev:before, .experience .card div.image_slider_wrapper .single_image_wrapper button.slick-arrow.slick-prev:before,
+.experience .card div.image_slider_wrapper div.image_slider button.slick-arrow.slick-next:before,
+.experience .card div.image_slider_wrapper .single_image_wrapper button.slick-arrow.slick-next:before {
   color: blue;
   font-size: 20px;
 }
-.experience .card div.image_slider_wrapper div.image_slider .slick-dots > li.slick-active button:before {
-  color: blue;
+.experience .card div.image_slider_wrapper div.image_slider ul.experience_image_slider_dot_bar, .experience .card div.image_slider_wrapper .single_image_wrapper ul.experience_image_slider_dot_bar {
+  display: none;
 }
-.experience .card .ui.divider {
-  margin-top: 30px;
+.experience .card .description {
+  width: 40.67797%;
+  float: right;
+  margin-right: 0;
 }
-.experience .card .responsibilities > p {
-  font-size: 15px;
+.experience .card .description ul.responsibilityList {
+  list-style: none;
+  text-align: left;
+}
+.experience .card .description ul.responsibilityList li.responsibility {
+  font-size: 1.2em;
+}
+.experience .card .description .languages_wrapper {
+  text-align: left;
+}
+@media (max-width: 800px) {
+  .experience .card .description {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .experience .card .description ul.responsibilityList,
+  .experience .card .description .languages_wrapper {
+    margin-left: 35.59322%;
+  }
+}
+@media (max-width: 800px) and (max-width: 800px) {
+  .experience .card .description ul.responsibilityList,
+  .experience .card .description .languages_wrapper {
+    margin-left: 23.72881%;
+  }
+}
+
+.experience .card .description.full {
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+}
+.experience .card .description.full ul.responsibilityList,
+.experience .card .description.full .languages_wrapper {
+  margin-left: 35.59322%;
+}
+@media (max-width: 800px) {
+  .experience .card .description.full ul.responsibilityList,
+  .experience .card .description.full .languages_wrapper {
+    margin-left: 23.72881%;
+  }
+}
+.experience .card .description.full ul.responsibilityList {
+  width: 49.15254%;
+  list-style: none;
+  text-align: left;
+}
+.experience .card .description.full .languages_wrapper {
+  width: 49.15254%;
+  text-align: left;
 }
 
 .education {
@@ -344,6 +476,8 @@ th {
 }
 .education > div {
   clear: both;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .education .educationPerformance .educationProgressbar {
   width: 23.72881%;
@@ -370,6 +504,12 @@ th {
   content: " ";
   display: block;
   clear: both;
+}
+.skill > h2 {
+  padding-top: 20px;
+}
+.skill .barChartView {
+  padding-bottom: 40px;
 }
 .skill .barChartView .recharts-responsive-container {
   margin: 0 auto;
