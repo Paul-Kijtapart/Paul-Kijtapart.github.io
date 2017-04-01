@@ -253,6 +253,25 @@ th {
 .portfolioApp > div {
   clear: both;
 }
+.portfolioApp .portfolioContentWrapper {
+  width: inherit;
+  height: inherit;
+}
+.portfolioApp .portfolioContentWrapper .app_content {
+  width: inherit;
+  padding-top: 71px;
+}
+
+.top_navbar {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  *zoom: 1;
+  position: fixed;
+  z-index: 10;
+}
 
 .introduction {
   max-width: 100%;
@@ -466,13 +485,8 @@ th {
 }
 
 .education {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-  *zoom: 1;
   background-color: #595C5F;
+  width: 100%;
 }
 .education > div {
   clear: both;
@@ -492,18 +506,9 @@ th {
 }
 
 .skill {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  *zoom: 1;
   background-color: #434649;
   color: white;
-}
-.skill:after {
-  content: " ";
-  display: block;
-  clear: both;
+  width: 100%;
 }
 .skill > h2 {
   padding-top: 20px;
@@ -519,17 +524,8 @@ th {
 }
 
 .contact {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  *zoom: 1;
   background-color: #434649;
-}
-.contact:after {
-  content: " ";
-  display: block;
-  clear: both;
+  width: 100%;
 }
 .contact .loadResume {
   margin: 0 auto;

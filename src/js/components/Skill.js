@@ -11,12 +11,12 @@ class Skill extends React.Component {
 
 		return (
 			<div className="skill">
-			<h2> Skill </h2>
-			<BarChartView 
-				technical_skill_list={technical_skill_list}
-				level_meaning={level_meaning}
-			/>
-		</div>
+				<h2> Skill </h2>
+				<BarChartView 
+					technical_skill_list={technical_skill_list}
+					level_meaning={level_meaning}
+				/>
+			</div>
 		);
 	}
 

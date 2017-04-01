@@ -1,0 +1,7 @@
+
+.top_navbar {
+	@include span(full);
+	@include clearfix;
+	position: fixed;
+	z-index: 10;
+}

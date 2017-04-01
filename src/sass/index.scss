@@ -24,7 +24,19 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     > div {
         clear: both;
     }
+
+    .portfolioContentWrapper {
+        width: inherit;
+        height: inherit;
+
+        .app_content {
+            width: inherit;
+            padding-top: 71px;
+        }
+    }
 }
+
+@import "partials/navbar";
 
 .introduction {
     @include container;
@@ -249,10 +261,8 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 }
 
 .education {
-    @include span(full);
-    @include clearfix;
-
     background-color: $black_6;
+    width: span(full);
 
     > div {
         clear: both;
@@ -279,11 +289,9 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 }
 
 .skill {
-    @include container;
-    @include clearfix;
-
     background-color: $black_7;
     color: white;
+    width: span(full);
 
     > h2 {
         padding-top: 20px;
@@ -305,10 +313,8 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 }
 
 .contact {
-    @include container;
-    @include clearfix;
-
     background-color: $black_7;
+    width: span(full);
 
     .loadResume {
         margin: 0 auto;
