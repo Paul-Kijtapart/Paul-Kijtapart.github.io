@@ -369,6 +369,7 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 .contact {
     background-color: $black_7;
     width: span(full);
+    padding-bottom: 20px;
 
     .loadResume {
         margin: 0 auto;

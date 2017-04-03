@@ -5,20 +5,4 @@
 	position: fixed;
 	z-index: 10;
 	left: 0;
-
-	.mobile {
-		display: none;
-	}
-
-	@include breakpoint(max-width 600px) {
-		.mobile {
-			background-color: black;
-			display: block;
-			height: 71px;
-		}
-
-		.desktop {
-			display: none;
-		}
-	}
 }

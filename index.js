@@ -33278,60 +33278,6 @@ var TopNavBar = function (_React$Component) {
 							"Contact"
 						)
 					)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					"div",
-					{ className: "ui floating labeled icon dropdown mobile" },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "content icon" }),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						"div",
-						{ className: "menu" },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
-							_extends({}, link_config, {
-								to: "introduction",
-								className: "green item"
-							}),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "diamond icon" }),
-							"Introduction"
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
-							_extends({}, link_config, {
-								to: "experience",
-								className: "teal item"
-							}),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "tasks icon" }),
-							"Experience"
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
-							_extends({}, link_config, {
-								to: "education",
-								className: "blue item"
-							}),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "student icon" }),
-							"Education"
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
-							_extends({}, link_config, {
-								to: "skill",
-								className: "violet item"
-							}),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "gift icon" }),
-							"Skill"
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
-							_extends({}, link_config, {
-								to: "contact",
-								className: "purple item"
-							}),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "mail outline icon" }),
-							"Contact"
-						)
-					)
 				)
 			);
 		}

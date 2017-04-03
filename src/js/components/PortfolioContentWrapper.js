@@ -71,55 +71,6 @@ class TopNavBar extends React.Component {
 						    </Link>
 					    </div>
 					</div>
-					<div className="ui floating labeled icon dropdown mobile">
-						<i className="content icon" />
-						<div className="menu">
-							<Link 
-					    		{...link_config}
-					    		to="introduction"
-					    		className="green item"
-					    	>
-						      	<i className="diamond icon" />
-						      	Introduction
-						    </Link>
-
-						    <Link 
-						    	{...link_config}
-						    	to="experience"
-						    	className="teal item"
-						    >
-						    	<i className="tasks icon" />
-						      	Experience
-						    </Link>
-
-						    <Link 
-						    	{...link_config}
-						    	to="education"
-						    	className="blue item"
-						    >
-						    	<i className="student icon" />
-						    	Education
-						    </Link>
-
-						    <Link 
-						    	{...link_config}
-						    	to="skill"
-						    	className="violet item"
-						    >
-						    	<i className="gift icon" />
-						      	Skill
-						    </Link>
-
-						    <Link 
-						    	{...link_config}
-						    	to="contact"
-						    	className="purple item"
-						    >
-						    	<i className="mail outline icon" />
-						    	Contact
-						    </Link>
-						</div>
-					</div>
 				</div>
 		);
 	}
