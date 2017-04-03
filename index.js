@@ -33207,23 +33207,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TopNavBar = function (_React$Component) {
 	_inherits(TopNavBar, _React$Component);
 
-	function TopNavBar() {
+	function TopNavBar(props) {
 		_classCallCheck(this, TopNavBar);
 
-		return _possibleConstructorReturn(this, (TopNavBar.__proto__ || Object.getPrototypeOf(TopNavBar)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (TopNavBar.__proto__ || Object.getPrototypeOf(TopNavBar)).call(this, props));
+
+		_this.handleDropDownClick = _this.handleDropDownClick.bind(_this);
+		return _this;
 	}
 
 	_createClass(TopNavBar, [{
+		key: "handleDropDownClick",
+		value: function handleDropDownClick(event) {
+			event.preventDefault();
+			console.log("Drop down toggle");
+			this.props.onToggleDropDown();
+		}
+	}, {
 		key: "render",
 		value: function render() {
+			var isToggle = this.props.isToggle;
+			var offset_scroll_value = isToggle ? -424 : -70;
 			var link_config = {
 				activeClass: "active",
 				spy: true,
-				offset: -70,
+				offset: offset_scroll_value,
 				smooth: true,
 				duration: 500
 			};
-			// TODO: add brand to left menu when have cool brand icon
 
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
@@ -33281,6 +33292,66 @@ var TopNavBar = function (_React$Component) {
 							"Contact"
 						)
 					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{ className: "ui inverted labeled icon menu mobile placeholder" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
+						className: "content icon",
+						onClick: this.handleDropDownClick
+					})
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{
+						className: "ui inverted vertical labeled icon menu mobile content",
+						style: isToggle ? { "display": "block" } : { "display": "none" }
+					},
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
+						_extends({}, link_config, {
+							to: "introduction",
+							className: "green item"
+						}),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "diamond icon" }),
+						"Introduction"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
+						_extends({}, link_config, {
+							to: "experience",
+							className: "teal item"
+						}),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "tasks icon" }),
+						"Experience"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
+						_extends({}, link_config, {
+							to: "education",
+							className: "blue item"
+						}),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "student icon" }),
+						"Education"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
+						_extends({}, link_config, {
+							to: "skill",
+							className: "violet item"
+						}),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "gift icon" }),
+						"Skill"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Link"],
+						_extends({}, link_config, {
+							to: "contact",
+							className: "purple item"
+						}),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "mail outline icon" }),
+						"Contact"
+					)
 				)
 			);
 		}
@@ -33295,10 +33366,28 @@ var PortfolioContentWrapper = function (_React$Component2) {
 	function PortfolioContentWrapper(props) {
 		_classCallCheck(this, PortfolioContentWrapper);
 
-		return _possibleConstructorReturn(this, (PortfolioContentWrapper.__proto__ || Object.getPrototypeOf(PortfolioContentWrapper)).call(this, props));
+		var _this2 = _possibleConstructorReturn(this, (PortfolioContentWrapper.__proto__ || Object.getPrototypeOf(PortfolioContentWrapper)).call(this, props));
+
+		_this2.state = {
+			isToggle: false
+		};
+
+		_this2.onToggleDropDown = _this2.onToggleDropDown.bind(_this2);
+		return _this2;
 	}
 
 	_createClass(PortfolioContentWrapper, [{
+		key: "onToggleDropDown",
+		value: function onToggleDropDown() {
+			this.setState(function (prevState) {
+				var current_toggle_status = prevState.isToggle;
+				console.log("Current toggle state is now " + current_toggle_status);
+				return {
+					isToggle: !current_toggle_status
+				};
+			});
+		}
+	}, {
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			__WEBPACK_IMPORTED_MODULE_1_react_scroll__["Events"].scrollEvent.register('begin', function () {
@@ -33320,13 +33409,23 @@ var PortfolioContentWrapper = function (_React$Component2) {
 	}, {
 		key: "render",
 		value: function render() {
+			var content_style_with_toggle_on = {
+				"padding-top": "424px"
+			};
+
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ className: "portfolioContentWrapper" },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TopNavBar, null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TopNavBar, {
+					onToggleDropDown: this.onToggleDropDown,
+					isToggle: this.state.isToggle
+				}),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"div",
-					{ className: "app_content" },
+					{
+						className: "app_content",
+						style: this.state.isToggle ? content_style_with_toggle_on : null
+					},
 					this.props.children
 				)
 			);
