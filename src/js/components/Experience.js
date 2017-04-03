@@ -186,8 +186,11 @@ class Card extends React.Component {
 			dotsClass: "experience_image_slider_dot_bar",
 			dots: false,
 			lazyLoad: true,
-			infinite: true,
 			speed: 500,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			fade: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 		};
