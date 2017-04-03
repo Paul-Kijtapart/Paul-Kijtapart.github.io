@@ -1,18 +1,21 @@
 import React from 'react';
 
 
+
 class CardProfile extends React.Component {
 	render() {
 		const abs_parent_image = "data/images/introduction";
 
 		return (
 			<div className="cardProfile">
-				<div className="card_profile_content_wrapper">
-					<div className="profile_image_wrapper"> 
-						<img
-							className="profile_image"
-							src={abs_parent_image + "/profilePic.introduction.jpg"}
-						/>
+				<div className="second_card_profile_content_wrapper">
+					<div className="card_profile_content_wrapper">
+						<div className="profile_image_wrapper"> 
+							<img
+								className="profile_image"
+								src={abs_parent_image + "/profilePic.introduction.jpg"}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -58,10 +61,11 @@ class Description extends React.Component {
 
 class Introduction extends React.Component {
 	render() {
+
 		return (
 			<div className="introduction">
-				<Description {...this.props} />
 				<CardProfile {...this.props} />
+				<Description {...this.props} />
 			</div>);
 	}
 

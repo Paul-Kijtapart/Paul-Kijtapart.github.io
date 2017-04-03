@@ -4,4 +4,19 @@
 	@include clearfix;
 	position: fixed;
 	z-index: 10;
+	left: 0;
+
+	.mobile {
+		display: none;
+	}
+
+	@include breakpoint(max-width 600px) {
+		.mobile {
+			display: block;
+		}
+
+		.desktop {
+			display: none;
+		}
+	}
 }

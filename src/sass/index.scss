@@ -43,14 +43,15 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     @include clearfix;
 
     background-color: $black_6;
-    width: 100%;
-    height: 400px;
-
-    // Hotspot: height here can be adjusted based on screen size
 
     > div {
-        padding-top: 20px;
+        padding-top: 40px;
         padding-bottom: 20px;
+
+        @include breakpoint(max-width 800px) {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
     }
 
     h4 {
@@ -65,12 +66,31 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
         font-size: 1.2em;
     }
 
+    @include breakpoint(max-width 800px) {
+        h4 {
+            font-size: 1.1em;
+        }
+
+        p {
+            font-size: 1.0em;
+        }
+
+        li {
+            font-size: 1.0em;
+        }
+    }
+
+
     .description {
         @include span(7 of 12 first);
         @include display-flex;
 
-        height: 100%;
         justify-content: center;
+
+        @include breakpoint(max-width 800px) {
+            @include span(7 of 7 last);
+        }
+
 
         .description_content_wrapper {
             align-self: center;
@@ -85,29 +105,52 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     .cardProfile {
         @include span(5 of 12 last);
+        @include display-flex;
 
-        background-color: $black_8;
-        height: 100%;
-        border-radius: 50%;
+        justify-content: center;
 
-        .card_profile_content_wrapper {
-            width: 100%;
+        @include breakpoint(max-width 850px) {
+            @include span(5 of 5);
+        }
 
-            .profile_image_wrapper {
+
+        .second_card_profile_content_wrapper {
+            @include display-flex;
+
+            justify-content: center;
+            width: 450px;
+            height: 450px;
+            background-color: $black_8;
+            border-radius: 50%;
+            margin: 0 auto;
+            align-self: center;
+
+            .card_profile_content_wrapper {
                 @include display-flex;
 
                 justify-content: center;
-                width: 90%;
-                height: 100%;
-                background-color: white;
+                width: 400px;
+                height: 400px;
                 margin: 0 auto;
-                overflow: hidden;
-                border-radius: 50%;
+                align-self: center;
 
-                .profile_image {
-                    align-self: center;
-                    width: 350px;
+                .profile_image_wrapper {
+                    @include display-flex;
+
+                    justify-content: center;
+                    width: 90%;
+                    height: 100%;
+                    background-color: white;
+                    margin: 0 auto;
+                    overflow: hidden;
                     border-radius: 50%;
+                    align-self: center;
+
+                    .profile_image {
+                        align-self: center;
+                        width: 350px;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
@@ -283,6 +326,11 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
                 line-height: 1.5em;
                 font-size: 1.5em;
                 font-weight: bold;
+
+                @include breakpoint(max-width 800px) {
+                    line-height: 1.2em;
+                    font-size: 0.8em;
+                }
             }
         }
     }
@@ -308,6 +356,12 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
             }
 
             .recharts-layer.recharts-x-axis {}
+
+            .bar_texts {
+                @include breakpoint(max-width 800px) {
+                    display: none;
+                }
+            }
         }
     }
 }

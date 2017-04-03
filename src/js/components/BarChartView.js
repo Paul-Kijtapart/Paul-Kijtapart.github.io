@@ -65,7 +65,7 @@ const CustomAxisTick = function(props) {
 	return (
 		<g>
 			{res.icon}
-			<text x={x} y={y} dy={44} textAnchor="middle" fill={fill}>
+			<text className="bar_texts" x={x} y={y} dy={44} textAnchor="middle" fill={fill}>
     			{res.meaning}
     		</text>
 		</g>

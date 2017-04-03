@@ -12,7 +12,6 @@ import Contact from 'components/Contact.js';
 import {
 	Element
 } from "react-scroll";
-import LazyLoad from 'react-lazy-load';
 
 class PortfolioApp extends React.Component {
 	render() {

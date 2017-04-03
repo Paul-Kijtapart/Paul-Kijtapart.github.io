@@ -271,6 +271,18 @@ th {
   *zoom: 1;
   position: fixed;
   z-index: 10;
+  left: 0;
+}
+.top_navbar .mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .top_navbar .mobile {
+    display: block;
+  }
+  .top_navbar .desktop {
+    display: none;
+  }
 }
 
 .introduction {
@@ -280,8 +292,6 @@ th {
   overflow: hidden;
   *zoom: 1;
   background-color: #595C5F;
-  width: 100%;
-  height: 400px;
 }
 .introduction:after {
   content: " ";
@@ -289,8 +299,14 @@ th {
   clear: both;
 }
 .introduction > div {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .introduction > div {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
 .introduction h4 {
   font-size: 1.3em;
@@ -301,14 +317,31 @@ th {
 .introduction li {
   font-size: 1.2em;
 }
+@media (max-width: 800px) {
+  .introduction h4 {
+    font-size: 1.1em;
+  }
+  .introduction p {
+    font-size: 1.0em;
+  }
+  .introduction li {
+    font-size: 1.0em;
+  }
+}
 .introduction .description {
   width: 57.62712%;
   float: left;
   margin-right: 1.69492%;
   display: -webkit-flex;
   display: flex;
-  height: 100%;
   justify-content: center;
+}
+@media (max-width: 800px) {
+  .introduction .description {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
 }
 .introduction .description .description_content_wrapper {
   align-self: center;
@@ -322,14 +355,39 @@ th {
   width: 40.67797%;
   float: right;
   margin-right: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 850px) {
+  .introduction .cardProfile {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.introduction .cardProfile .second_card_profile_content_wrapper {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 450px;
+  height: 450px;
   background-color: #303336;
-  height: 100%;
   border-radius: 50%;
+  margin: 0 auto;
+  align-self: center;
 }
-.introduction .cardProfile .card_profile_content_wrapper {
-  width: 100%;
+.introduction .cardProfile .second_card_profile_content_wrapper .card_profile_content_wrapper {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  align-self: center;
 }
-.introduction .cardProfile .card_profile_content_wrapper .profile_image_wrapper {
+.introduction .cardProfile .second_card_profile_content_wrapper .card_profile_content_wrapper .profile_image_wrapper {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
@@ -339,8 +397,9 @@ th {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
+  align-self: center;
 }
-.introduction .cardProfile .card_profile_content_wrapper .profile_image_wrapper .profile_image {
+.introduction .cardProfile .second_card_profile_content_wrapper .card_profile_content_wrapper .profile_image_wrapper .profile_image {
   align-self: center;
   width: 350px;
   border-radius: 50%;
@@ -504,6 +563,12 @@ th {
   font-size: 1.5em;
   font-weight: bold;
 }
+@media (max-width: 800px) {
+  .education .educationPerformance .educationProgressbar .progressbar-text {
+    line-height: 1.2em;
+    font-size: 0.8em;
+  }
+}
 
 .skill {
   background-color: #434649;
@@ -521,6 +586,11 @@ th {
 }
 .skill .barChartView .recharts-responsive-container .recharts-layer.recharts-y-axis {
   color: white;
+}
+@media (max-width: 800px) {
+  .skill .barChartView .recharts-responsive-container .bar_texts {
+    display: none;
+  }
 }
 
 .contact {
