@@ -71,7 +71,7 @@ class TopNavBar extends React.Component {
 						    </Link>
 					    </div>
 					</div>
-					<div className="ui inverted labeled icon dropdown button mobile">
+					<div className="ui floating labeled icon dropdown mobile">
 						<i className="content icon" />
 						<div className="menu">
 							<Link 

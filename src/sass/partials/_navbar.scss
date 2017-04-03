@@ -12,7 +12,9 @@
 
 	@include breakpoint(max-width 600px) {
 		.mobile {
+			background-color: black;
 			display: block;
+			height: 71px;
 		}
 
 		.desktop {

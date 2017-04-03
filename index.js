@@ -33281,7 +33281,7 @@ var TopNavBar = function (_React$Component) {
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"div",
-					{ className: "ui inverted labeled icon dropdown button mobile" },
+					{ className: "ui floating labeled icon dropdown mobile" },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "content icon" }),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						"div",

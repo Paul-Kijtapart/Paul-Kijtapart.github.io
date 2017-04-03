@@ -278,7 +278,9 @@ th {
 }
 @media (max-width: 600px) {
   .top_navbar .mobile {
+    background-color: black;
     display: block;
+    height: 71px;
   }
   .top_navbar .desktop {
     display: none;
