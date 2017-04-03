@@ -66,7 +66,7 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
         font-size: 1.2em;
     }
 
-    @include breakpoint(max-width 800px) {
+    @include breakpoint(max-width 850px) {
         h4 {
             font-size: 1.1em;
         }
@@ -87,7 +87,7 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
         justify-content: center;
 
-        @include breakpoint(max-width 800px) {
+        @include breakpoint(max-width 850px) {
             @include span(7 of 7 last);
         }
 
