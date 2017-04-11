@@ -20122,10 +20122,18 @@ var Card = function (_React$Component2) {
 
 			var selectedIcon = project_type_to_icon_map[projectType];
 			var isNoImage = images === undefined || images.length === 0 ? true : false;
+			var eventType = this.props.eventType;
+			var team_size_icon = this.props.team_size > 1 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "Users icon" }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "User icon" });
 
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ className: "card" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{ className: "ui black ribbon label my_ribbon" },
+					team_size_icon,
+					eventType
+				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"i",
 					{ className: "ui right corner label" },
@@ -20192,6 +20200,8 @@ var Experience = function (_React$Component3) {
 					images: project.images,
 					languages: project.languages,
 					url: project.url,
+					team_size: project.team.size,
+					eventType: project.eventType,
 					responsibilities: project.responsibilities
 				});
 			});

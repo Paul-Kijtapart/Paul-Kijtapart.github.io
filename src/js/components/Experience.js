@@ -249,9 +249,16 @@ class Card extends React.Component {
 
 		const selectedIcon = project_type_to_icon_map[projectType];
 		const isNoImage = (images === undefined || images.length === 0) ? true : false;
+		const eventType = this.props.eventType;
+		const team_size_icon = this.props.team_size > 1 ?
+			(<i className="Users icon" />) : (<i className="User icon" />);
 
 		return (
 			<div className="card">
+				<div className="ui black ribbon label my_ribbon"> 
+					{team_size_icon}
+					{eventType} 
+				</div>
 				<i className="ui right corner label"> 
 					{selectedIcon}
 				</i>
@@ -290,6 +297,8 @@ class Experience extends React.Component {
 					images={project.images}
 					languages={project.languages}
 					url={project.url}
+					team_size={project.team.size}
+					eventType={project.eventType}
 					responsibilities={project.responsibilities}					
 				/>
 			);

@@ -20,6 +20,7 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
     color: $black_0;
     text-align: center;
+    overflow: visible;
 
     > div {
         clear: both;
@@ -154,7 +155,6 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
                     height: 100%;
                     background-color: white;
                     margin: 0 auto;
-                    overflow: hidden;
                     border-radius: 50%;
                     align-self: center;
 
@@ -179,11 +179,13 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
     @include clearfix;
 
     background-color: white;
+    overflow: visible;
 
     .card {
         @include span(full);
         @include clearfix;
 
+        overflow: visible;
         background-color: white;
         color: black;
         margin-bottom: 20px;
@@ -194,6 +196,18 @@ $susy: (columns: 12, gutter: 1 / 4, math: fluid, global-box-sizing: border-box);
 
         &:first-child {
             border-top: none;
+        }
+
+        div.my_ribbon {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: -20px;
+            font-size: 1.2em;
+
+            @include breakpoint(max-width 800px) {
+                left: 0;
+            }
         }
 
         div.image_slider_wrapper {

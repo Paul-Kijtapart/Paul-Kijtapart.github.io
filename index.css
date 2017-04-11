@@ -244,6 +244,7 @@ th {
   *zoom: 1;
   color: #E6E9EC;
   text-align: center;
+  overflow: visible;
 }
 .portfolioApp:after {
   content: " ";
@@ -431,7 +432,6 @@ th {
   height: 100%;
   background-color: white;
   margin: 0 auto;
-  overflow: hidden;
   border-radius: 50%;
   align-self: center;
 }
@@ -454,6 +454,7 @@ th {
   overflow: hidden;
   *zoom: 1;
   background-color: white;
+  overflow: visible;
 }
 .experience:after {
   content: " ";
@@ -467,6 +468,7 @@ th {
   margin-right: 0;
   overflow: hidden;
   *zoom: 1;
+  overflow: visible;
   background-color: white;
   color: black;
   margin-bottom: 20px;
@@ -477,6 +479,18 @@ th {
 }
 .experience .card:first-child {
   border-top: none;
+}
+.experience .card div.my_ribbon {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: -20px;
+  font-size: 1.2em;
+}
+@media (max-width: 800px) {
+  .experience .card div.my_ribbon {
+    left: 0;
+  }
 }
 .experience .card div.image_slider_wrapper {
   width: 57.62712%;
